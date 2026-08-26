@@ -1,0 +1,67 @@
+/* CSS DOCUMENT */ 
+@charset "UFT-8";
+
+
+@font-face {
+    font-family:"Adelle Sans Regular";
+    src: url(font/AdelleSansEXT-Regular.ttf) format(truetype); 
+    font-weight:100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Adelle Sans EXTRABold";
+    src: url(font/AdelleSansEXT-Extrabold.ttf) format(truetype);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Adelle Sans Bold";
+    src: url(font/AdelleSansEXT-Bold.ttf) format(truetype);
+    font-weight:bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Comic";
+    src: url(font/comic.ttf) format(truetype);
+    font-weight:normal;
+    font-style: normal;
+}
+
+
+
+* {
+    font-family: "regular", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#cabecera {
+    background-color:antiquewhite;
+}
+
+h1 {
+    color:orangered;
+    font-size: 50px;
+}
+
+h2{
+    font-family: "Adelle Sans Bold", sans-serif;
+    font-size: 20px;
+    color:blue;
+}
+
+.ver {
+    width: 200px;
+    background-color:orangered;
+}
+
+
+.horizontal {
+    background-color:orangered;
+    width: 300 px;
+    height: 40px;
+
+}
