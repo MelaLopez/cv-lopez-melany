@@ -1,11 +1,11 @@
-/* CSS DOCUMENT */ 
+/* CSS DOCUMENT */
 @charset "UFT-8";
 
 
 @font-face {
-    font-family:"Adelle Sans Regular";
-    src: url(font/AdelleSansEXT-Regular.ttf) format(truetype); 
-    font-weight:100;
+    font-family: "Adelle Sans Regular";
+    src: url(font/AdelleSansEXT-Regular.ttf) format(truetype);
+    font-weight: 100;
     font-style: normal;
 }
 
@@ -19,49 +19,66 @@
 @font-face {
     font-family: "Adelle Sans Bold";
     src: url(font/AdelleSansEXT-Bold.ttf) format(truetype);
-    font-weight:bold;
+    font-weight: bold;
     font-style: normal;
 }
-
-@font-face {
-    font-family: "Comic";
-    src: url(font/comic.ttf) format(truetype);
-    font-weight:normal;
-    font-style: normal;
-}
-
-
 
 * {
     font-family: "regular", sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: 5px;
+    box-sizing: border-box;
+    background-color: antiquewhite;
+    
 }
 
-#cabecera {
-    background-color:antiquewhite;
+
+.navegador {
+       background-color: blue;
+    display: flex;
+    padding: 3px;
+    gap: 60px;
+    justify-content: center;
+}
+
+.navegador a {
+    color: beige;
+    text-decoration: none;
+    background-color: transparent;
 }
 
 h1 {
-    color:orangered;
-    font-size: 50px;
+    color: orangered;
+    font-size: 3.1rem;
+    line-height: 3rem;
 }
 
-h2{
+h2 {
     font-family: "Adelle Sans Bold", sans-serif;
-    font-size: 20px;
-    color:blue;
+    font-size: 1.5rem;
+    color: blue;
+    line-height: 2.3rem;
+    font-variant-caps: all-petite-caps;
 }
 
 .ver {
     width: 200px;
-    background-color:orangered;
+    background-color: orangered;
 }
 
 
 .horizontal {
-    background-color:orangered;
-    width: 300 px;
-    height: 40px;
+    background-color: orangered;
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    justify-content: space-evenly;
+}
 
+p {
+    text-wrap-style: balance;
+    line-height: 1.5rem;
+}
+
+.negrita {
+    font-weight: 780;
 }
