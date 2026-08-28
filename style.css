@@ -1,11 +1,11 @@
 /* CSS DOCUMENT */
-@charset "UFT-8";
+@charset "UTF-8";
 
 
 @font-face {
     font-family: "Adelle Sans Regular";
     src: url(font/AdelleSansEXT-Regular.ttf) format(truetype);
-    font-weight: 100;
+    font-weight: normal;
     font-style: normal;
 }
 
@@ -25,17 +25,26 @@
 
 * {
     font-family: "regular", sans-serif;
-    margin: 5px;
     box-sizing: border-box;
-    background-color: antiquewhite;
-    
 }
 
+body{
+    background-color: antiquewhite;
+}
+
+header {
+    margin: 15px;
+}
+
+main {
+    margin: 15px;
+}
 
 .navegador {
-       background-color: blue;
+    font-size: 1.1rem;
+    background-color: #5f7ce7;
     display: flex;
-    padding: 3px;
+    padding: 13px;
     gap: 60px;
     justify-content: center;
 }
@@ -43,42 +52,90 @@
 .navegador a {
     color: beige;
     text-decoration: none;
-    background-color: transparent;
 }
 
 h1 {
-    color: orangered;
+    color: #DE682A;
     font-size: 3.1rem;
     line-height: 3rem;
+    letter-spacing: 1px;
+    margin: 20px 0px 10px 0px;
+
 }
 
 h2 {
     font-family: "Adelle Sans Bold", sans-serif;
-    font-size: 1.5rem;
-    color: blue;
+    font-size: 1.8rem;
     line-height: 2.3rem;
+    letter-spacing: 1px;
+    color: #4268f4;
     font-variant-caps: all-petite-caps;
+    margin: 0;
 }
-
-.ver {
-    width: 200px;
-    background-color: orangered;
-}
-
 
 .horizontal {
-    background-color: orangered;
+    background-color: #DE682A;
     text-align: center;
-    padding: 15px;
+    padding: 28px;
     display: flex;
     justify-content: space-evenly;
+    text-decoration: none;
+    margin: 0%;
+    font-size: 1.1rem;
+}
+
+.horizontal li {
+    margin: 0;
+    list-style: none;
 }
 
 p {
     text-wrap-style: balance;
     line-height: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.estudios ul li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+}
+
+.programas {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    line-height: 1.6rem;
+    font-size: 1.1rem;
 }
 
 .negrita {
     font-weight: 780;
+    font-style: italic;
+    margin-top: 25px;
+    margin-bottom: 0px;
 }
+
+.pie {
+    background-color: #4268f4;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.pie ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 15px;
+    list-style: none;
+}
+
+.pie li, .pie a {
+    color: beige;
+    text-decoration: none;
+}
+
