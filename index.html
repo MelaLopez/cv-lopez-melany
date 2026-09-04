@@ -1,91 +1,151 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
      <meta charset="utf-8" />
      <title> Mi curriculum </title>
      <link href="style.css" rel="stylesheet" type="text/css">
      <style>
-          @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
      </style>
 </head>
 
-<!--Todavia me cuesta enterde la parte de flexbox, sigo practicando-->
-
 <body>
      <header>
-          <nav class="navegador">
-               <a href="#">Inicio</a>
-               <a href="#">Experiencia</a>
-               <a href="#">Portafolio</a>
+          <nav class="navegador-flex">
+               <p class="nombre">LÓPEZ, Melany</p>
+               <div class="navegador">
+                    <a href="#">Inicio</a>
+                    <a href="#">Experiencia</a>
+                    <a href="#">Estudios</a>
+                    <a href="#">Contacto</a>
+               </div>
           </nav>
-
-          <img src="img/foto-perfil.jpg" alt="Foto de perfil">
-          <h1>¡Hola, me llamo Melany!</h1>
-          <h2>Estudiante de la Licenciatura en Diseño y Comunicación Visual | Especialización en UX/UI</h2>
-          <p>Tengo 26 años, soy estudiante de los últimos años de Diseño con interés en Diseño Editorial y UX/UI. Busco
-               una oportunidad laboral que me permita volcar mis conocimientos, sumar experiencia en proyectos
-               integrales </p>
      </header>
 
+
      <main>
-          <section>
-               <article>
-                    <ul class="horizontal">
-                         <li>Tel: 11 28991477</li>
-                         <li>Correo: Dis.melanylopez@gmail.com</li>
-                         <li>Dirección: Buenos Aires, Lomas de zamora</li>
+          <section class="encabezado">
+               <!-- <img src="img/foto-perfil.jpg" alt="Foto de perfil" width="300px" height="300px"> -->
+               <div>
+                    <h2>Estudiante en Diseño y Comunicación Visual | Especialización en UX/UI</h2>
+                    <h1>Hola, me llamo Melany!</h1>
+                    <p>Tengo 26 años, soy estudiante de los últimos años de Diseño con interés en Diseño Editorial y
+                         UX/UI. Busco una oportunidad laboral que me permita volcar mis conocimientos, sumar experiencia
+                         en proyectos integrales </p>
+                    <p class="encabezado-p">Conoce un poco más de mi...</p>
+               </div>
+          </section>
+
+          <section class="contacto-contenedor">
+               <ul class="contacto-flex">
+                    <li>Dis.Melany@gmail.com</li>
+                    <li>11 0000 0000</li>
+                    <li>Buenos Aires, Lomas de Zamora</li>
+               </ul>
+          </section>
+
+
+          <section class="contenedor">
+               <div class="info-izq">
+                    <h2>EXPERIENCIA</h2>
+               </div>
+
+               <div class="info-der">
+                    <article class="trabajo">
+                         <h3>Pasacalles LEO</h3>
+                         <p>Maquetación y preparación de archivos vectoriales para cartelería y pasacalles a gran
+                              escala.
+                              Creación, digitalización y optimización de piezas gráficas vectoriales utilizando
+                              CorelDRAW y Adobe Illustrator</p>
+                    </article>
+
+                    <article class="trabajo">
+                         <h3>Diseñadora gráfica freelance</h3>
+                         <p>Gestión integral y desarrollo de proyectos visuales de manera autónoma</p>
+                    </article>
+               </div>
+          </section>
+
+          <section class="contenedor">
+               <div class="info-izq">
+                    <h2>HABILIDADES<br>TECNOLOGICAS</h2>
+               </div>
+
+               <div class="info-der">
+                    <h3>Programa de diseño</h3>
+                    <ul>
+                         <li>Corel Draw</li>
+                         <li>Adobe Illustrator CC</li>
+                         <li>Adobe Photoshop CC</li>
+                         <li>Adobe InDesing</li>
+                         <li>Adobe After Effects</li>
                     </ul>
 
-                    <p class="negrita">Pasacalles LEO</p>
-                    <p>Maquetación y preparación de archivos
-                         vectoriales para cartelería y pasacalles a gran escala.
-                         Creación, digitalización y optimización de piezas
-                         gráficas vectoriales utilizando CorelDRAW y Adobe Illustrator</p>
-                    <p class="negrita">Diseñadora gráfica freelance</h2>
-                    <p>Gestión integral y desarrollo de proyectos visuales de manera autónoma</p>
-               </article>
+                    <h3>Paquete office</h3>
+                    <p>Me desempeñe en la creacion de pasacalles en Uruguay, se utilizo el progrmama
+                         corel draw e illustrator</p>
+               </div>
           </section>
 
-          <section>
-               <h2>HABILIDADES TECNOLOGICAS</h2>
-               <p class="negrita">Programa de diseño</p>
 
-               <ul class="programas">
-                    <li>Corel Draw</li>
-                    <li>Adobe Illustrator CC</li>
-                    <li>Adobe Photoshop CC</li>
-                    <li>Adobe InDesing</li>
-                    <li>Adobe After</li>
-               </ul>
 
-               <p class="negrita">Paquete office</p>
-               <p>Me desempeñe en la creacion de pasacalles en Uruguay, se utilizo el progrmama
-                    corel draw e illustrator</p>
+          <Section class="contenedor">
+               <div class="info-izq">
+                    <h2>ESTUDIOS</h2>
+               </div>
+
+               <div class="info-der">
+                    <ul>
+                         <li class="negrita">Universidad de Lanús</li>
+                         <li>Lic. en Diseño y comunicación visual. 2018 - actualmente</li>
+                         <li class="negrita">ADA itw</li>
+                         <li>Diseño UX/UI. 2022-2023</li>
+                    </ul>
+               </div>
+          </Section>
+
+
+          <section class="contenedor">
+               <div class="info-izq">
+                    <h2>Portafolio</h2>
+                    <li><a href="https://www.behance.net/melanylopez4">Click aca</a></li>
+               </div>
+
+
+               <div class="info-der">
+                    <img src="img/codigo-qr.jpg" alt="Codigo QR a mi proyecto" width="180px" height="180px">
+                    <p class="italic"> O escanea para ver mi portafolio</p>          
+               </div>
           </section>
 
-          <section>
-               <h2>ESTUDIOS</h2>
-               <p class="negrita">Universidad de Lanús</p>
-               <p>Lic. en Diseño y comunicación visual. 2018 - actualmente</p>
-               <p class="negrita">ADA itw</p>
-               <p>Diseño UX/UI. 2022-2023</p>
-
+          <!--Se van a cambiar las imagenes en un futuro-->
+          <section class="contenedor-imagenes">
+               <div>
+                    <h2>ALGUNOS PROYECTOS</h2>
+                    <div class="imagenes-flex">
+                         <img src="img/Editorial Do Ho Suh.jpg" alt="Editoria Do-Ho-Suh" width="380" height="300">
+                         <img src="img/Editorial Do Ho Suh.jpg" alt="Editoria Do-Ho-Suh" width="380" height="300">
+                         <img src="img/Editorial Do Ho Suh.jpg" alt="Editoria Do-Ho-Suh" width="380" height="300">
+                    </div>
+               </div>
           </section>
 
-          <section>
-               <h2 class="ver">Portafolio</h2>
-               <img src="img/codigo-qr.jpg" alt="Codigo QR a mi proyecto" width="180px" height="180px">
-               <p> Escanea para ver mi portafolio</p>
+          <section class="contenedor-imagenes">
+               <div class="imagenes-flex">
+                    <img src="img/Editorial Do Ho Suh.jpg" alt="Editoria Do-Ho-Suh" width="380" height="300">
+                    <img src="img/Editorial Do Ho Suh.jpg" alt="Editoria Do-Ho-Suh" width="380" height="300">
+                    <img src="img/Editorial Do Ho Suh.jpg" alt="Editoria Do-Ho-Suh" width="380" height="300">
+               </div>
           </section>
      </main>
 
-     <footer class="pie">
+     <footer>
           <ul>
-               <li>Catedra Wischñevsky, 2026</li>
-               <li>Mis redes</li>
-               <li><a href="https://www.behance.net/melanylopez4">Behance</a></li>
-               <li><a href="https://mail.google.com/mail/u/0/#inbox">Mi correo</a></li>
+               <li>catedra wischñevsky, 2026</li>
+               <li><a href="https://www.behance.net/melanylopez4">mis redes</a></li>
+               <li><a href="https://www.behance.net/melanylopez4">behance</a></li>
+               <li><a href="https://mail.google.com/mail/u/0/#inbox">mi correo</a></li>
           </ul>
      </footer>
 </body>
