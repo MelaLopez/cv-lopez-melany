@@ -3,11 +3,12 @@
 
 <head>
      <meta charset="utf-8" />
-     <title> Mi curriculum </title>
+     <title> Mi curriculum </title> <!--necesitamos que cuando tengamos las pestañas abiertas de cada trabajo no nos perdamos y sepamos para quién es, con este título podría ser de cualquiera-->
      <link href="style.css" rel="stylesheet" type="text/css">
      <style>
 
-     </style>
+     </style> <!--dijimos que no ibamos a utilizar las etiquetas style en html-->
+     <!--falta el favicon!-->
 </head>
 
 <body>
@@ -68,12 +69,12 @@
           </section>
 
           <section class="contenedor">
-               <div class="info-izq">
-                    <h2>HABILIDADES<br>TECNOLOGICAS</h2>
+               <div class="info-izq"> <!--cuando tengas un solo elemento dentro de una etiqueta no se justifica su uso a menos que tengas uso de css, en este caso puede ser pero también podrías aplicar la misma class a los h2 que va a funcionar igual y te queda menos choclazo-->
+                    <h2>HABILIDADES<br>TECNOLOGICAS</h2> <!--no se pueden usar br en este tp!-->
                </div>
 
                <div class="info-der">
-                    <h3>Programa de diseño</h3>
+                    <h3>Programa de diseño</h3> <!--no sería plural?-->
                     <ul>
                          <li>Corel Draw</li>
                          <li>Adobe Illustrator CC</li>
@@ -90,7 +91,7 @@
 
 
 
-          <Section class="contenedor">
+          <Section class="contenedor"> <!--guarda con las mayúsculas-->
                <div class="info-izq">
                     <h2>ESTUDIOS</h2>
                </div>
@@ -109,22 +110,22 @@
           <section class="contenedor">
                <div class="info-izq">
                     <h2>Portafolio</h2>
-                    <li><a href="https://www.behance.net/melanylopez4">Click aca</a></li>
+                    <li><a href="https://www.behance.net/melanylopez4">Click aca</a></li> <!--los elementos de una lista tienen que estar dentro de una etiqueta de lista. por otro lado, si vas a salir de la página te conviene agregar un target="_blank" para que se abra el link en otra pestaña y no se pierda tu página-->
                </div>
 
 
                <div class="info-der">
                     <img src="img/codigo-qr.jpg" alt="Codigo QR a mi proyecto" width="180px" height="180px">
-                    <p class="italic"> O escanea para ver mi portafolio</p>          
+                    <p class="italic"> O escanea para ver mi portafolio</p> <!--mucha repetición de palabras-->         
                </div>
           </section>
 
           <!--Se van a cambiar las imagenes en un futuro-->
-          <section class="contenedor-imagenes">
+          <section class="contenedor-imagenes"> <!--técnicamente esta sección y la siguiente deberían ser las mismas, no hay justificación de que se separen en dos secciones distintas, con flex-wrap y max-width se solucionan los problemas de tamaño-->
                <div>
                     <h2>ALGUNOS PROYECTOS</h2>
                     <div class="imagenes-flex">
-                         <img src="img/Editorial Do Ho Suh.jpg" alt="Editoria Do-Ho-Suh" width="380" height="300">
+                         <img src="img/Editorial Do Ho Suh.jpg" alt="Editoria Do-Ho-Suh" width="380" height="300"> <!--guarda que así no se escriben los archivos!-->
                          <img src="img/Editorial Do Ho Suh.jpg" alt="Editoria Do-Ho-Suh" width="380" height="300">
                          <img src="img/Editorial Do Ho Suh.jpg" alt="Editoria Do-Ho-Suh" width="380" height="300">
                     </div>
