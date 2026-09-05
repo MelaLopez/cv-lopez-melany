@@ -3,75 +3,165 @@
 
 
 @font-face {
-    font-family: "Adelle Sans Regular";
-    src: url(font/AdelleSansEXT-Regular.ttf) format(truetype);
-    font-weight: normal;
+    font-family: "lato";
+    src: url(font/Lato-Thin.ttf) format(truetype);
+    font-weight: thin;
     font-style: normal;
 }
 
-@font-face {
-    font-family: "Adelle Sans EXTRABold";
-    src: url(font/AdelleSansEXT-Extrabold.ttf) format(truetype);
-    font-weight: bold;
-    font-style: normal;
-}
 
 @font-face {
-    font-family: "Adelle Sans Bold";
-    src: url(font/AdelleSansEXT-Bold.ttf) format(truetype);
+    font-family: "Lato";
+    src: url(font/Lato-Black.ttf) format(truetype);
     font-weight: bold;
     font-style: normal;
 }
 
 * {
-    font-family: "regular", sans-serif;
+    font-family: "thin", sans-serif;
     box-sizing: border-box;
-}
-
-body{
-    background-color: antiquewhite;
-}
-
-header {
-    margin: 15px;
-}
-
-main {
-    margin: 15px;
-}
-
-.navegador {
-    font-size: 1.1rem;
-    background-color: #5f7ce7;
-    display: flex;
-    padding: 13px;
-    gap: 60px;
-    justify-content: center;
-}
-
-.navegador a {
-    color: beige;
+    list-style: none;
+    padding: 0%;
     text-decoration: none;
 }
 
+.navegador-flex {
+    font-size: 1.3rem;
+    background-color: #fafbff;
+    display: flex;
+    padding: 10px 55px;
+    gap: 60px;
+    align-items: center;
+    padding-right: 60px;
+    justify-content: space-between;
+}
+
+.navegador {
+    display: flex;
+    gap: 45px;
+}
+
+.navegador a {
+    color: #00674F;
+    text-decoration: none;
+}
+
+
+
+.contenedor {
+    display: flex;
+    gap: 50px;
+    max-width: 1200px;
+    margin-top: 120px;
+    margin-bottom: 60px;
+    padding: 0px 0px 0px 320px;
+}
+
+.encabezado {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: #00674F;
+    color: #dad3cf;
+    width: 100%;
+    padding: 320px;
+}
+
+.encabezado-p {
+    font-weight: 800;
+}
+
+.encabezado,
+.contenedor {
+    display: flex;
+}
+
+.contacto-contenedor {
+    background-color: #8DBE00;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+.contacto-contenedor ul {
+    color: #00674F;
+    display: flex;
+    padding: 20px;
+    gap: 150px;
+    margin: 0%;
+}
+
+
+p,
+li {
+    text-wrap-style: balance;
+    line-height: 2.1rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
 h1 {
-    color: #DE682A;
-    font-size: 3.1rem;
+    color: #dad3cf;
+    font-size: 5rem;
     line-height: 3rem;
     letter-spacing: 1px;
     margin: 20px 0px 10px 0px;
-
+    font-weight: 50;
 }
 
 h2 {
-    font-family: "Adelle Sans Bold", sans-serif;
     font-size: 1.8rem;
-    line-height: 2.3rem;
+    line-height: 2.1rem;
     letter-spacing: 1px;
-    color: #4268f4;
+    color: #8DBE00;
     font-variant-caps: all-petite-caps;
     margin: 0;
+    font-weight: 800;
 }
+
+
+h3 {
+    color: #00674F;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    letter-spacing: 1px;
+    margin: 0;
+    font-weight: 800;
+    font-variant-caps: all-petite-caps;
+}
+
+
+
+
+.info-izq {
+    width: 260px;
+    flex-shrink: 0;
+}
+
+.info-der {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.estudios {
+    padding: 0%;
+    margin: 0%;
+}
+
+ul {
+    margin: 0%;
+}
+
+
+body {
+    padding: 0%;
+    margin: 0;
+    background-color: antiquewhite;
+}
+
+
 
 .horizontal {
     background-color: #DE682A;
@@ -79,7 +169,6 @@ h2 {
     padding: 28px;
     display: flex;
     justify-content: space-evenly;
-    text-decoration: none;
     margin: 0%;
     font-size: 1.1rem;
 }
@@ -89,53 +178,50 @@ h2 {
     list-style: none;
 }
 
-p {
-    text-wrap-style: balance; /*el style está de más*/
-    line-height: 1.5rem;
-    font-size: 1.1rem;
-}
-
-.estudios ul li {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    padding-left: 0;
-}
-
-.programas {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    padding-left: 0;
-    line-height: 1.6rem;
-    font-size: 1.1rem;
-}
-
 .negrita {
     font-weight: 780;
-    font-style: italic;
-    margin-top: 25px;
-    margin-bottom: 0px;
+    letter-spacing: 0.5px;
 }
 
-.pie {
-    background-color: #4268f4;
+
+.contenedor-imagenes {
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 0px 80px 80px;
+}
+
+.imagenes-flex {
+    display: flex;
+    gap: 98px;
+    margin-top: 40px;
+}
+
+
+
+footer {
+    background-color: #00674F;
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
     margin: 0;
 }
 
-.pie ul {
+footer ul {
     display: flex;
     justify-content: space-around;
     margin: 0;
     padding: 15px;
     list-style: none;
+    font-weight: 750;
+    font-variant: small-caps;
+
 }
 
-.pie li, .pie a {
+.italic {
+    font-style: italic;
+}
+
+footer li,
+footer a {
     color: beige;
-    text-decoration: none;
 }
-
