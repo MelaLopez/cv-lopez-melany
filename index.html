@@ -17,7 +17,7 @@
 <body>
      <header>
           <nav class="navegador-flex">
-               <b>LÓPEZ, Melany</b>
+               <b>LÓPEZ, Melany</b> <!--esta es una etiqueta de diseño, no va-->
                <div class="navegador">
                     <a href="index.html">inicio</a>
                     <a href="sobremi.html">sobre mi</a>
@@ -32,15 +32,15 @@
 
      <main>
           <section class="contenedor-principal">
-               <div class="encabezado">
-                    <div>
+               <div class="encabezado"> <!--este div está de más-->
+                    <div> <!--hay una etiqueta que es hgroup que funciona mejor para un grupo de títulos-->
                          <h1 id="saludo-personalizado">
-                              Hola,<br>
+                              Hola,<br><!--en el tp1 mencionamos que no pueden usar br-->
                               me llamo <span class="cursiva">Melany</span>
                          </h1>
                          <p>Soy estudiante en diseño y comunicación visual y te cuento un poco de mi...</p>
                     </div>
-                    <img class="foto-perfil" src="img/Foto-perfil.jpg" alt="Foto de mi perfil">
+                    <img class="foto-perfil" src="img/Foto-perfil.jpg" alt="Foto de mi perfil"> <!--faltan medidas-->
                </div>
           </section>
      </main>
@@ -49,9 +49,9 @@
 
      <footer>
           <div>
-               <ul class="footer-columna"></ul>
-               <h4>CONECTAR</h4>
-               <li><a href=""></a>BEHANCE</li>
+               <ul class="footer-columna"></ul> <!--guarda que tenés un cierre de ul acá que te está complicando el indentado y la construcción-->
+               <h4>CONECTAR</h4> <!--dentro de una ul sólo pueden haber etiquetas li-->
+               <li><a href=""></a>BEHANCE</li><!--el texto tiene que estar por dentro de la etiquera a porque sino no funciona el enlace-->
                <li><a href=""></a>LINKEDIN</li>
                </ul>
           </div>
