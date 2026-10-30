@@ -14,9 +14,9 @@
 </head>
 
 <body>
-    <header class="contenedor-header">
-        <nav class="navegador-flex">
-            <b>LÓPEZ, Melany</b>
+    <header>
+        <nav>
+            <span>LÓPEZ, Melany</span>
             <div class="navegador">
                 <a href="index.html">inicio</a>
                 <a href="sobremi.html">sobre mi</a>
@@ -27,84 +27,134 @@
     </header>
 
     <main>
-        <section class="contenedor-diccionario">
-            <div class="columna-diccionario">
-                <h2>Diccionario</h2>
-                <p class="cursiva">Ilustrado</p>
-                <p class="otro-p">Libro autopublicación - Diccionario ilustrado «Registro de sensaciones»</p>
-                <p>Este es un proyecto editorial que reúne una serie de pliegos con <b>palabras desprovistas
-                        de significado tradicional,</b> donde la tipografía, el trazo manual y el pulso visual habitan
-                    la inmensidad de las páginas. En otras palabras, este proyecto es una bitácora de lo
-                    intangible</p>
-            </div>
-
-            <div class="img-diccionario">
-                <img src="img/tapa-diccionario.jpg" alt="">
-            </div>
-        </section>
-
-        <section class="grid">
-             <div class="img-columna"><img src="img/pliego-proyecto-1.jpg" alt=""></div>
-             <div class="img-columna"><img src="img/pliego-proyecto-2.jpg" alt=""></div>
-             <div class="img-columna"><img src="img/pliego-proyecto-3.jpg" alt=""></div>
-             <div class="img-columna"><img src="img/pliego-proyecto-1.jpg" alt=""></div>
-             <div class="img-columna"><img src="img/pliego-proyecto-2.jpg" alt=""></div>
-             <div class="img-columna"><img src="img/pliego-proyecto-3.jpg" alt=""></div>
-        </section>
-
-        <section class="contenedor-carrusel">
-            <div class="carrusel">
-                <img class="carrusel-3" src="img/carrusel-3.jpg">
-                <img class="carrusel-1" src="img/carrusel-1.jpg">
-                <img class="carrusel-2" src="img/carrusel-2.jpg">
-                <img class="carrusel-4" src="img/carrusel-4.jpg">
-                <img class="carrusel-5" src="img/carrusel-5.jpg">
-            </div>
-
-            <ul class="flechas">
-                <button class="flecha-izq"></button>
-                <button class="flecha-der"></button>
-            </ul>
-            <script src="index.js "></script>
-            
-    
-
-        </section>
-
-
-   
-        <div class="atras">
-            <a href="sobremi.html">Ver otros proyectos</a>
+        <div class="tabs-navegacion">
+            <button class="tab-btn activo" onclick="mostrarProyecto(event, 'proyecto-diccionario')">Diccionario
+                Ilustrado</button>
+            <button class="tab-btn" onclick="mostrarProyecto(event, 'proyecto-dos')">Reediseño poemario</button>
+            <button>Tercer Proyecto</button>
+            <button>Cuarto Proyecto</button>
         </div>
+
+        <div id="proyecto-diccionario" class="proyecto-contenido activo-contenido">
+            <section class="contenedor-diccionario">
+                <hgroup>
+                    <h2>Diccionario</h2>
+                    <p class="cursiva">Ilustrado</p>
+                    <p class="otro-p">Libro autopublicación - Diccionario ilustrado «Registro de sensaciones»</p>
+                    <p>Este es un proyecto editorial que reúne una serie de pliegos con <span
+                            class="texto-destacado">palabras desprovistas de significado tradicional,</span> donde la
+                        tipografía, el trazo manual y el pulso visual habitan la inmensidad de las páginas. En otras
+                        palabras, este proyecto es una bitácora de lo intangible</p>
+                </hgroup>
+
+                <div class="img-diccionario">
+                    <img src="img/proyecto-editorial-libro-registro.jpg"
+                        alt="Portada del libro registro de sensaciones">
+                </div>
+            </section>
+
+            <section class="grid">
+                <div><img src="img/pliego-proyecto-1.jpg" width="402" height="264" alt="pliego 1"></div>
+                <div><img src="img/pliego-proyecto-2.jpg" width="402" height="264" alt="pliego 2"></div>
+                <div><img src="img/pliego-proyecto-3.jpg" width="402" height="264" alt="pliego 3"></div>
+                <div><img src="img/pliego-proyecto-5.jpg" width="402" height="264" alt="pliego 4"></div>
+                <div><img src="img/pliego-proyecto-4.jpg" width="402" height="264" alt="pliego 5"></div>
+                <div><img src="img/pliego-proyecto-6.jpg" width="402" height="264" alt="pliego 6"></div>
+            </section>
+
+            <section class="contenedor-carrusel">
+                <div class="carrusel" id="carrusel-1">
+                    <img class="carrusel-3" src="img/carrusel-proyectos/carrusel-1.jpg" alt="carrusel 1">
+                    <img class="carrusel-1" src="img/carrusel-proyectos/carrusel-2.jpg" alt="carrusel 2">
+                    <img class="carrusel-2" src="img/carrusel-proyectos/carrusel-3.jpg" alt="carrusel 3">
+                    <img class="carrusel-4" src="img/carrusel-proyectos/carrusel-4.jpg" alt="carrusel 4">
+                    <img class="carrusel-5" src="img/carrusel-proyectos/carrusel-5.jpg" alt="carrusel 5">
+                </div>
+
+                <div class="flechas">
+                    <button class="flecha-izq" onclick="moverCarrusel('carrusel-1', -1)">❮</button>
+                    <button class="flecha-der" onclick="moverCarrusel('carrusel-1', 1)">❯</button>
+                </div>
+            </section>
+        </div>
+
+
+        <div id="proyecto-dos" class="proyecto-contenido">
+            <section class="contenedor-diccionario">
+                <hgroup>
+                    <h2>Colección de libros</h2>
+                    <p class="cursiva">Poemario</p>
+                    <p class="otro-p">Colección de libros - Rediseño de tapas e interior «Poemario Alejandra Pizarnik»
+                    </p>
+                    <p>Diseño de sistema editorial de tapas e interior para una colección de libros, basada en tres
+                        obras de Alejandra Pizarnik «El árbol de Diana», «Extracción de la piedra de la locura», y «Los
+                        trabajos de la noche» <b>esta imperfección tecnica no es un descuido</b>, responde a una
+                        busqueda expresiva que trasmite, con honestidad brutal, la tensión, el dolor y su carga
+                        emocional</p>
+                </hgroup>
+                <div class="img-diccionario">
+                    <img src="img/proyecto-editorial-coleccion-libros.jpg"
+                        alt="Portada del poemario de Alejandra Pizarnik">
+                </div>
+            </section>
+
+            <article class="grid">
+                <div><img src="img/pliego-poemario-1.jpg" width="402" height="260" alt="pliego 1"></div>
+                <div><img src="img/pliego-poemario-2.jpg" width="402" height="260" alt="pliego 2"></div>
+                <div><img src="img/pliego-poemario-3.jpg" width="402" height="260" alt="pliego 3"></div>
+                <div><img src="img/pliego-poemario-4.jpg" width="402" height="260" alt="pliego 4"></div>
+                <div><img src="img/pliego-poemario-5.jpg" width="402" height="260" alt="pliego 5"></div>
+                <div><img src="img/pliego-poemario-6.jpg" width="402" height="260" alt="pliego 6"></div>
+            </article>
+
+            <section class="contenedor-carrusel">
+                <div class="carrusel" id="carrusel-2">
+                    <img class="carrusel-3" src="img/carrusel-proyectos/carrusel-poemario-1.jpg" alt="carrusel 1">
+                    <img class="carrusel-1" src="img/carrusel-proyectos/carrusel-poemario-2.jpg" alt="carrusel 2">
+                    <img class="carrusel-2" src="img/carrusel-proyectos/carrusel-poemario-3.jpg" alt="carrusel 3">
+                    <img class="carrusel-4" src="img/carrusel-proyectos/carrusel-poemario-4.jpg" alt="carrusel 4">
+                    <img class="carrusel-5" src="img/carrusel-proyectos/carrusel-poemario-5.jpg" alt="carrusel 5">
+                </div>
+
+                <div class="flechas">
+                    <button class="flecha-izq" onclick="moverCarrusel('carrusel-2', -1)">❮</button>
+                    <button class="flecha-der" onclick="moverCarrusel('carrusel-2', 1)">❯</button>
+                </div>
+            </section>
+        </div>
+
+        <script src="index.js"></script>
     </main>
 
     <footer>
-          <div>
-               <ul class="footer-columna"></ul>
-               <h4>CONECTAR</h4>
-               <li><a href=""></a>BEHANCE</li>
-               <li><a href=""></a>LINKEDIN</li>
-               </ul>
-          </div>
+        <div class="footer-contenedor">
+            <div>
+                <h4>CONECTAR</h4>
+                <ul class="footer-columna">
+                    <li><a href="https://www.behance.net" target="_blank">BEHANCE</a></li>
+                    <li><a href="https://www.linkedin.com" target="_blank">LINKEDIN</a></li>
+                </ul>
+            </div>
 
-          <div>
-               <h4>REDES SOCIALES</h4>
-               <ul>
-                    <a href="https://mail.google.com/mail/u/0/#inbox"><img src="img/logo-mail.png"
-                              alt="logo correo"></a>
-                    <a href=""><img src="img/logo-be.png" alt="logo de behance" alt="logo de behance"></a>
-                    <a href=""><img src="img/logo-inst.png" alt="logo de instagram" alt="logo de instagram"></a>
-               </ul>
-          </div>
+            <div>
+                <h4>REDES SOCIALES</h4>
+                <ul class="footer-redes">
+                    <li><a href="#"><img src="img/icon-email.svg" alt="email" width="30px" height="20px"></a></li>
+                    <li><a href="#"><img src="img/icon-beh.svg" alt="behance" width="27px" height="23px"></a></li>
+                    <li><a href="#"><img src="img/icon-inst.svg" alt="instagram" width="25px" height="29px"></a>
+                    </li>
+                </ul>
+            </div>
 
-          <div class="footer-columna">
-               <h4>DIRECCION</h4>
-               <ul>
-                    <li>BUENOS AIRES,<br> LOMAS DE ZAMORA</li>
-               </ul>
-          </div>
-     </footer>
-
+            <div>
+                <h4>DIRECCION</h4>
+                <ul class="footer-columna">
+                    <li>BUENOS AIRES</li>
+                    <li>LOMAS DE ZAMORA</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

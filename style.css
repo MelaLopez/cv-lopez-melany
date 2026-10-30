@@ -16,39 +16,54 @@ p {
     font-weight: 400;
     line-height: 1.4rem;
     letter-spacing: 0.5px;
-    padding: 0px 0px 20px;
+    margin-top: 15px;
 }
 
 .otro-p {
-    font-size: 1.05rem;
     font-family: "Intel One Mono", monospace;
     font-weight: 700;
 }
 
 .cursiva {
     font-family: "Reenie Beanie", cursive;
-    color: #00674F;
+    color: #FFD000;
     font-size: 5.2rem;
     padding: 10px 0 40px 0;
-
 }
-
 
 body {
     background-color: #E7E7E7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main {
+    flex: 100
 }
 
 /*HEADER*/
 
+.header,
+span {
+    font-weight: bold;
+}
 
-.navegador-flex {
+header {
+    background-color: #00674F;
+}
+
+.header,
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #FAEBD7;
-    background-color: #00674F;
+    color: #fcfcfc;
     font-size: 1.1rem;
-    padding: 25px 135px;
+    padding: 25px 70px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .navegador {
@@ -57,15 +72,9 @@ body {
 }
 
 .navegador a {
-    color: #FAEBD7;
-    position: relative;
-    text-decoration: none;
+    color: #fcfcfc;
     padding-bottom: 4px;
     border-bottom: 3px solid transparent;
-}
-
-b {
-    color: #FAEBD7;
 }
 
 .navegador a:hover {
@@ -73,66 +82,31 @@ b {
     color: #FFD000;
 }
 
-.navegador-flex-negro {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.header-negro {
     background-color: #090909;
-    font-size: 1.1rem;
-    padding: 25px 135px;
-    color: #FAEBD7;
 }
-
-.navegador-negro {
-    color: #FAEBD7;
-    position: relative;
-    text-decoration: none;
-    padding-bottom: 4px;
-    border-bottom: 3px solid transparent;
-    display: flex;
-    gap: 45px;
-}
-
-.navegador-negro a {
-    color: #FAEBD7;
-    border-bottom: 3px solid transparent;
-    font-weight: 400;
-}
-
-.navegador-negro a:hover {
-    border-bottom-color: #FFD000;
-    color: #FFD000;
-    padding-bottom: 4px;
-}
-
-
 
 /* comienza INICIO*/
-
 
 .foto-perfil {
     border-radius: 50%;
 }
 
-
-.contenedor-principal {
-    background-color: #E7E7E7;
-    padding: 65px 135px;
-}
-
 .encabezado {
+    background-color: #E7E7E7;
+    padding: 65px 50px;
+    max-width: 1350px;
+    margin: 0 auto;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    gap: 60px;
 }
-
 
 h1 {
     color: #090909;
     font-size: 4.3rem;
     line-height: 4.5rem;
-    letter-spacing: 1px;
     margin: 35px 0px 35px 0px;
     font-weight: 100;
 }
@@ -149,44 +123,14 @@ h3 {
     letter-spacing: 0.5px;
     font-size: 1, 3rem;
     font-variant: small-caps;
-    padding-bottom: 3px;
+    padding-bottom: 4px;
 }
 
-.cv {
-    display: flex;
-    max-width: 100%;
-    margin: 50px 0 60px;
-    padding: 0 135px;
-    gap: 50px;
-    color: #E7E7E7;
+.cursiva-nombre {
+    color: #00674F;
+    font-family: "Reenie Beanie", cursive;
+    font-size: 5.5rem;
 }
-
-
-
-.columna-izq-titulo {
-    width: 400px;
-    color: #8DBE00;
-    font-size: 1.3rem;
-    font-weight: 450;
-}
-
-.columna-der {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding-bottom: 5px;
-    color: #090909;
-}
-
-.columna-der li {
-    color: #090909;
-    font-family: "Inter", sans-serif;
-    font-size: 1.05rem;
-    font-weight: 400;
-    letter-spacing: 0.5px;
-}
-
-
 
 /*comienza SOBRE MI*/
 
@@ -203,61 +147,87 @@ h3 {
 .contenedor-gatito {
     width: 170px;
     height: auto;
-    cursor: pointer;
-    flex-shrink: 0;
 }
 
 .contenedor-sobre-mi {
     width: 100%;
-    min-height: calc(100vh - 80px);
+    min-height: calc(90vh - 80px);
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 40px;
     box-sizing: border-box;
     padding: 0 20px;
 }
 
-div.tarjeta-sobre-mi {
+
+.indicador-scroll {
+  position: absolute;
+  left: 160px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.indicador-flecha img {
+  animation: rebote 1.5s ease-in-out infinite;
+}
+
+.contenedor-sobre-mi hgroup {
     background-color: #E7E7E7;
-    border: 2px #8DBE00 solid;
+    border: 2px solid #8DBE00;
     max-width: 500px;
     padding: 50px 60px;
     border-radius: 8px;
 }
 
 
-/* trabajos y proyectos */
-
-.contenedor-trabajos {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    max-width: 1100px;
-    margin: 80px auto;
-    padding: 0 20px;
-    box-sizing: border-box;
+@keyframes rebote {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
 }
 
-.proyecto-diccionario,
-.proyecto-coleccion {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.proyecto-imagen {
-    flex: 1;
-}
-
-.proyecto-imagen img {
+.contenedor-acordeon {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
     width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 4px;
+    max-width: 1250px;
+    margin: 40px auto;
+    align-items: start;
 }
 
+.acordeon-item {
+    margin-bottom: 12px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.acordeon-titulo {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 22px;
+    cursor: pointer;
+    user-select: none;
+    background-color: #00674F;
+    color: #E7E7E7;
+}
+
+.contenido {
+    padding: 10px 22px;
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+.contenido li {
+    font-family: "Inter", sans-serif;
+    color: #090909;
+    font-size: 1rem;
+    line-height: 1.7rem;
+}
 
 
 /* comienza PROYECTOS*/
@@ -267,21 +237,15 @@ div.tarjeta-sobre-mi {
     color: #E7E7E7;
     display: flex;
     width: 100%;
-    height: 100vh;
     box-sizing: border-box;
 }
 
-.columna-diccionario {
+.contenedor-diccionario hgroup {
     width: 50%;
     margin: 0px;
     padding: 80px 135px;
     box-sizing: border-box;
 }
-
-.columna-diccionario h2 {
-    margin-bottom: 9px;
-}
-
 
 .img-diccionario {
     width: 50%;
@@ -294,51 +258,64 @@ div.tarjeta-sobre-mi {
 .img-diccionario img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
 }
-
 
 .grid {
     margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 22px;
-    width: 100%;
-    max-width: none;
-    padding-left: 135px;
-    padding-right: 135px;
+    max-width: 1250px;
+    margin: 30px auto 0 auto;
 }
 
-.img-columna img {
+.grid div:hover img {
+    transform: scale(1.05);
+}
+
+.grid img {
     width: 100%;
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.proyecto-contenido {
+    display: none;
+}
+
+.proyecto-contenido.activo-contenido {
     display: block;
-    border-radius: 3px;
 }
 
-
-
-.atras {
-    width: 100%;
-    text-align: right;
+.tabs-navegacion {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 40px 0 20px 0;
 }
 
-.atras a {
-    font-size: 1.05rem;
-    font-family: "Intel One Mono", monospace;
-    padding-bottom: 3px;
-    margin: 40px 135px 40px 0;
-    font-weight: 700;
+.tabs-navegacion button {
+    background-color: #121212;
+    color: #fff;
+    padding: 12px 24px;
+    font-family: inherit;
+    font-size: 1rem;
     cursor: pointer;
-    border-bottom: 3px solid transparent;
-    color: #0d0d0d;
-    display: inline-block;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
-.atras a:hover {
-    border-bottom-color: #FFD000;
-    transition: border-bottom-color 0.2s ease;
+.tab-btn:hover {
+    background-color: #8DBE00;
+    color: #00674F;
+}
+
+.tab-btn.activo {
+    background-color: #00674F;
+    color: #fff;
 }
 
 
@@ -347,32 +324,27 @@ div.tarjeta-sobre-mi {
     width: 100%;
     max-width: 1250px;
     margin: 40px auto;
+    box-sizing: border-box;
 }
-
 
 .carrusel {
     display: flex;
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    gap: 20px;
     width: 100%;
     scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
 }
-
 
 .carrusel img {
     flex: 0 0 100%;
     width: 100%;
-    height: auto object-fit: contain;
     scroll-snap-align: start;
 }
-
 
 .flechas {
     position: absolute;
     top: 50%;
-    left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -380,7 +352,6 @@ div.tarjeta-sobre-mi {
     pointer-events: none;
     z-index: 10;
 }
-
 
 .flechas button {
     pointer-events: auto;
@@ -390,14 +361,13 @@ div.tarjeta-sobre-mi {
     width: 45px;
     height: 45px;
     background-color: #00674F;
-    color: #8DBE00;
+    color: #fcfcfc;
     border: none;
     border-radius: 50%;
-    font-size: 24px;
-    font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     transition: background-color 0.3s ease, transform 0.2s ease;
+    pointer-events: auto;
     margin: 0 -22px;
 }
 
@@ -416,7 +386,6 @@ div.tarjeta-sobre-mi {
     padding: 50px 20px
 }
 
-
 .formato-negro {
     display: flex;
     justify-content: center;
@@ -424,12 +393,12 @@ div.tarjeta-sobre-mi {
 }
 
 .formato-negro h2 {
-    color: #8DBE00;
+    color: #FFD000;
 }
 
 main.formato-negro {
     background-color: #090909;
-    color: #E7E7E7;
+    color: #fcfcfc;
     min-height: 100vh;
     margin: 0;
 }
@@ -445,7 +414,7 @@ form {
     flex-direction: column;
     gap: 20px;
     max-width: 800px;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .fila-input {
@@ -464,11 +433,13 @@ input {
     width: 100%;
     border-radius: 5px;
     padding: 10px 20px;
-    background-color: #EBEBEB;
-    border: 2px solid #8DBE00;
+    background-color: #fcfcfc;
+    border: 2px solid #FFD000;
 }
 
 .btn-enviar {
+    background-color: #fcfcfc;
+    color: #0e0d0d;
     margin-top: 15px;
     border-radius: 5px;
     width: fit-content;
@@ -477,33 +448,33 @@ input {
     cursor: pointer;
 }
 
-.btn-enviar :hover {
-    background-color: #8DBE00;
-    color: #EBEBEB;
+.btn-enviar:hover {
+    background-color: #FFD000;
+    color: #00674F;
+    font-weight: 600;
 }
 
 
 /* FOOTER*/
 
-
-
-
 footer {
-    align-items: flex-start;
-    display: flex;
-    justify-content: space-between;
     background-color: #00674F;
     width: 100%;
-    padding: 20px 135px;
-    color: #f9f9f9;
-    font-size: 1rem;
 }
 
-footer ul {
+.footer-contenedor {
     display: flex;
-    justify-content: space-around;
-    list-style: none;
-    padding: 0;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 18px 40px;
+}
+
+footer h4 {
+    color: #FFD000;
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+    padding-bottom: 9px;
     margin: 0;
 }
 
@@ -512,51 +483,104 @@ footer ul {
     flex-direction: column;
 }
 
-footer,
-h4 {
-    color: #FFD000;
-    padding-bottom: 9px;
+footer ul {
+    display: flex;
+    list-style: none;
+    gap: 8px;
+}
+
+footer li,
+footer a {
+    color: #fcfcfc;
     font-size: 0.9rem;
     letter-spacing: 0.3px;
 }
 
-.footer-columna,
-li {
-    color: #FFD000;
-    padding-bottom: 9px;
-    font-size: 0.9rem;
-    letter-spacing: 0.3px;
-
+.footer-redes {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    align-items: center;
 }
 
+/* @media Pagina - Sobre Mi*/ 
 
-/* tengo incovenientes son el @media, una vez que logro hacerlo responsive no vuelve a su formato escritorio
-
-
-@media screen and (min-width: 500px) {
-    .contenedor-trabajos {
-        flex-direction: column;
-        gap: 50px;
-        margin: 30px auto;
-        padding: 0 60px;
-    }
-
-    .otro-p {
-        padding-bottom: 20px;
-    }
-
-    .contenedor-sobre-mi {
-        flex-direction: column;
-    }
-
-    .footer {
-        align-items: flex-start;
+@media screen and (max-width: 500px) {
+    .encabezado {
+        background-color: #E7E7E7;
+        padding: 30px 35px;
         display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: space-between;
+        gap: 40px;
+    }
+
+    h1 {
+        color: #090909;
+        font-size: 2.5rem;
+        line-height: 3rem;
+        margin: 10px 0px 10px 0px;
+        font-weight: 100;
+    }
+    .cursiva-nombre {
+        color: #00674F;
+        font-family: "Reenie Beanie", cursive;
+        font-size: 3.5rem;
+    }
+    .header,
+    span {
+        font-weight: bold;
+        font-size: 0.7rem;
+    }
+    header {
+        background-color: #00674F;
+    }
+    .header,
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        font-size: 0.8rem;
+        padding: 20px 15px;
+    }
+    .navegador {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    p {
+        font-size: 0.8rem;
+        font-family: "Inter", sans-serif;
+        line-height: 1.4rem;
+        letter-spacing: 0.5px;
+    }
+    footer {
         background-color: #00674F;
         width: 100%;
-        padding: 20px 60px;
-        font-size: 0.8rem;
+    }
+    .footer-contenedor {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        text-align: center;
+    }
+    footer h4 {
+        color: #FFD000;
+        font-size: 0.6rem;
+        letter-spacing: 0.3px;
+        padding-bottom: 5px;
+    }
+    footer li,
+    footer a {
+        color: #fcfcfc;
+        font-size: 0.6rem;
+        letter-spacing: 0.5px;
+    }
+    .footer-redes {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
     }
 }
-*/
